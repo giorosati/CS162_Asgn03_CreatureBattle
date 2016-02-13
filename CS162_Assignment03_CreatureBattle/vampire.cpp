@@ -30,17 +30,17 @@ Vampire::~Vampire()
 	//cout << "vampire deconstructor has run." << endl;
 }
 
-void Vampire::attack()
+int Vampire::attack()
 {
-
+	return 3;
 }
 
-void Vampire::defend()
+int Vampire::defend()
 {
-
+	return 1;
 }
 
-void Vampire::displayName() //to be implemented in derived classes
+string Vampire::getName()
 {
-	cout << "Vampire";
+	return "Vampire";
 }

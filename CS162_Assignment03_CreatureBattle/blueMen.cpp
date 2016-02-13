@@ -30,17 +30,17 @@ BlueMen::~BlueMen()
 	//cout << "vampire deconstructor has run." << endl;
 }
 
-void BlueMen::attack()
+int BlueMen::attack()
 {
-
+	return 3;
 }
 
-void BlueMen::defend()
+int BlueMen::defend()
 {
-
+	return 1;
 }
 
-void BlueMen::displayName() //to be implemented in derived classes
+string BlueMen::getName()
 {
-	cout << "Blue Men";
+	return "Blue Men";
 }

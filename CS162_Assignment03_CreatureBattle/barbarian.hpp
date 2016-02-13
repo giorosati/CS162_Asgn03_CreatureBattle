@@ -18,11 +18,11 @@ protected:
 
 public:
 	Barbarian();
-	Barbarian(int);
+	//Barbarian(int);
 	~Barbarian();
-	void attack();
-	void defend();
-	void displayName();
+	int attack();
+	int defend();
+	string getName();
 };
 
 #endif

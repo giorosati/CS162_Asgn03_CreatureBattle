@@ -17,29 +17,33 @@ using std::endl;
 
 Creature::Creature()
 {
-	this->strength = 0;
 }
 
-Creature::Creature(int strengthIn)
-{
-	this->strength = strengthIn;
-}
+//Creature::Creature(int strengthIn)
+//{
+//	this->strength = strengthIn;
+//}
 
 Creature::~Creature()
 {
 	//cout << "creature deconstructor has run" << endl;
 }
 
-void Creature::attack()	//to be implemented in derived classes
-{}
+//int Creature::attack()	//to be implemented in derived classes
+//{}
 
-void Creature::defend()	//to be implemented in derived classes
-{}
+//int Creature::defend()	//to be implemented in derived classes
+//{}
 
-void Creature::displayName() //to be implemented in derived classes
-{}
+//string Creature::getName() //to be implemented in derived classes
+//{}
 
 int Creature::getStength()
 {
 	return strength;
 };
+
+void Creature::setStrength(int strengthIn)
+{
+	strength = strengthIn;
+}

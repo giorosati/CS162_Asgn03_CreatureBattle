@@ -20,9 +20,9 @@ public:
 	BlueMen();
 	BlueMen(int);
 	~BlueMen();
-	void attack();
-	void defend();
-	void displayName();
+	int attack();
+	int defend();
+	string getName();
 };
 
 #endif

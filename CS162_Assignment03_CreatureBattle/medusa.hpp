@@ -20,9 +20,9 @@ public:
 	Medusa();
 	Medusa(int);
 	~Medusa();
-	void attack();
-	void defend();
-	void displayName();
+	int attack();
+	int defend();
+	string getName();
 };
 
 #endif

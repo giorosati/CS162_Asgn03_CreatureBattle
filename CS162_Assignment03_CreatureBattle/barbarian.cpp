@@ -17,30 +17,30 @@ using std::endl;
 
 Barbarian::Barbarian()
 {
-	strength = 0;
+	strength = 12;
 }
 
-Barbarian::Barbarian(int strengthIn)
-{
-	strength = strengthIn;
-}
+//Barbarian::Barbarian(int strengthIn)
+//{
+//	strength = strengthIn;
+//}
 
 Barbarian::~Barbarian()
 {
 	//cout << "medusa deconstructor has run." << endl;
 }
 
-void Barbarian::attack()
+int Barbarian::attack()
 {
-
+	return 3;
 }
 
-void Barbarian::defend()
+int Barbarian::defend()
 {
-
+	return 1;
 }
 
-void Barbarian::displayName() //to be implemented in derived classes
+string Barbarian::getName()
 {
-	cout << "Barbarian";
+	return "Barbarian";
 }

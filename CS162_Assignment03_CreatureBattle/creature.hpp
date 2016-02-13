@@ -20,16 +20,16 @@ class Creature
 {
 protected:
 	int strength;
-	string creatureType;
 
 public:
 	Creature();					//default constructor
-	Creature(int);				//constructor w/int for strength
+	//Creature(int);				//constructor w/int for strength
 	~Creature();				//deconstructor
-	virtual void attack();		//attack function prototype
-	virtual void defend();		//defend function prototype
-	virtual void displayName();	//displayName function prototype
+	virtual int attack() = 0;		//attack function prototype
+	virtual int defend() = 0;		//defend function prototype
+	virtual string getName() = 0;	//displayName function prototype
 	int getStength();			//getter for strength
+	void setStrength(int);		//setter for strength
 };
 
 #endif

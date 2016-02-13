@@ -30,17 +30,17 @@ HarryPotter::~HarryPotter()
 	//cout << "vampire deconstructor has run." << endl;
 }
 
-void HarryPotter::attack()
+int HarryPotter::attack()
 {
-
+	return 3;
 }
 
-void HarryPotter::defend()
+int HarryPotter::defend()
 {
-
+	return 1;
 }
 
-void HarryPotter::displayName() //to be implemented in derived classes
+string HarryPotter::getName()
 {
-	cout << "Harry Potter";
+	return "Harry Potter";
 }

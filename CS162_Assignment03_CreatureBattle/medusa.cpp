@@ -30,16 +30,16 @@ Medusa::~Medusa()
 	//cout << "medusa deconstructor has run." << endl;
 }
 
-void Medusa::attack()
+int Medusa::attack()
 {
-
+	return 3;
 }
 
-void Medusa::defend()
+int Medusa::defend()
 {
-
+	return 1;
 }
-void Medusa::displayName() //to be implemented in derived classes
+string Medusa::getName()
 {
-	cout << "Medusa";
+	return "Medusa";
 }
