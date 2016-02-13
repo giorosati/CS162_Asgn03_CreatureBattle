@@ -36,6 +36,9 @@ void Creature::attack()	//to be implemented in derived classes
 void Creature::defend()	//to be implemented in derived classes
 {}
 
+void Creature::displayName() //to be implemented in derived classes
+{}
+
 int Creature::getStength()
 {
 	return strength;

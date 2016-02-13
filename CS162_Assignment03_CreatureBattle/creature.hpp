@@ -10,11 +10,17 @@
 #define CREATURE_HPP
 
 //includes
+//#include <cstdlib>
+//#include <string>
+
+//usings
+using std::string;
 
 class Creature
 {
 protected:
 	int strength;
+	string creatureType;
 
 public:
 	Creature();					//default constructor
@@ -22,6 +28,7 @@ public:
 	~Creature();				//deconstructor
 	virtual void attack();		//attack function prototype
 	virtual void defend();		//defend function prototype
+	virtual void displayName();	//displayName function prototype
 	int getStength();			//getter for strength
 };
 

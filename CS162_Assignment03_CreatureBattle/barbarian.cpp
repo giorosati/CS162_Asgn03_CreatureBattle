@@ -1,45 +1,46 @@
 /*********************************************************************
-** Program Filename: medusa.cpp
+** Program Filename: barbarian.cpp
 ** Author: Giovanni Rosati
 ** email: rosatig@oregonstate.edu
-** Date: 2016-02-11
-** Description: Medusa class implementation file CS162_400 Assignment 3
+** Date: 2016-02-12
+** Description: Barbarian class implementation file CS162_400 Assignment 3
 *********************************************************************/
 
 //includes
 #include <cstdlib>
 #include <iostream>
-#include "medusa.hpp"
+#include "barbarian.hpp"
 
 //usings
 using std::cout;
 using std::endl;
 
-Medusa::Medusa()
+Barbarian::Barbarian()
 {
 	strength = 0;
 }
 
-Medusa::Medusa(int strengthIn)
+Barbarian::Barbarian(int strengthIn)
 {
 	strength = strengthIn;
 }
 
-Medusa::~Medusa()
+Barbarian::~Barbarian()
 {
 	//cout << "medusa deconstructor has run." << endl;
 }
 
-void Medusa::attack()
+void Barbarian::attack()
 {
 
 }
 
-void Medusa::defend()
+void Barbarian::defend()
 {
 
 }
-void Medusa::displayName() //to be implemented in derived classes
+
+void Barbarian::displayName() //to be implemented in derived classes
 {
-	cout << "Medusa";
+	cout << "Barbarian";
 }

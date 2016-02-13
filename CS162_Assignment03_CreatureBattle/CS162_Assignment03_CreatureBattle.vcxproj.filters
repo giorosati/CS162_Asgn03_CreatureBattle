@@ -21,12 +21,39 @@
     <ClInclude Include="medusa.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="barbarian.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vampire.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlueMen.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="harryPotter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="creature.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="medusa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="barbarian.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vampire.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="blueMen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="harryPotter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

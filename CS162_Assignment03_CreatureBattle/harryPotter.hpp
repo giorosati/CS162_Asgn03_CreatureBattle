@@ -1,25 +1,25 @@
 /*********************************************************************
-** Program Filename: medusa.hpp
+** Program Filename: harryPotter.hpp
 ** Author: Giovanni Rosati
 ** email: rosatig@oregonstate.edu
-** Date: 2016-02-11
-** Description: Medusa class header file CS162_400 Assignment 3
+** Date: 2016-02-12
+** Description: HarryPotter class header file CS162_400 Assignment 3
 *********************************************************************/
 
-#ifndef MEDUSA_HPP
-#define MEDUSA_HPP
+#ifndef HARRYPOTTER_HPP
+#define HARRYPOTTER_HPP
 
 //includes
 #include "creature.hpp"
 
-class Medusa : public Creature
+class HarryPotter : public Creature
 {
 protected:
 
 public:
-	Medusa();
-	Medusa(int);
-	~Medusa();
+	HarryPotter();
+	HarryPotter(int);
+	~HarryPotter();
 	void attack();
 	void defend();
 	void displayName();
