@@ -15,15 +15,14 @@
 using std::cout;
 using std::endl;
 
-Vampire::Vampire()
-{
-	strength = 0;
-}
+//Vampire::Vampire()
+//{
+//	strength = 0;
+//}
 
 Vampire::Vampire(int strengthIn)
-{
-	strength = strengthIn;
-}
+	: Creature(strengthIn)
+{}
 
 Vampire::~Vampire()
 {

@@ -15,15 +15,14 @@
 using std::cout;
 using std::endl;
 
-Barbarian::Barbarian()
-{
-	strength = 12;
-}
-
-//Barbarian::Barbarian(int strengthIn)
+//Barbarian::Barbarian()
 //{
-//	strength = strengthIn;
+//	strength = 12;
 //}
+
+Barbarian::Barbarian(int strengthIn)
+	: Creature(strengthIn)
+{}
 
 Barbarian::~Barbarian()
 {
@@ -32,12 +31,14 @@ Barbarian::~Barbarian()
 
 int Barbarian::attack()
 {
-	return 3;
+	int roll = (rand() % (6) + 1) + (rand() % (6) + 1);		//sum of two random numbers from 1 to 6
+	return roll;
 }
 
 int Barbarian::defend()
 {
-	return 1;
+	int roll = (rand() % (6) + 1) + (rand() % (6) + 1);		//sum of two random numbers from 1 to 6
+	return roll;
 }
 
 string Barbarian::getName()

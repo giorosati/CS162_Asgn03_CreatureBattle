@@ -15,15 +15,14 @@
 using std::cout;
 using std::endl;
 
-HarryPotter::HarryPotter()
-{
-	strength = 0;
-}
+//HarryPotter::HarryPotter()
+//{
+//	strength = 0;
+//}
 
 HarryPotter::HarryPotter(int strengthIn)
-{
-	strength = strengthIn;
-}
+	: Creature(strengthIn)
+{}
 
 HarryPotter::~HarryPotter()
 {

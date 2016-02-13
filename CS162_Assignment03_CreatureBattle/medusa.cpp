@@ -15,15 +15,14 @@
 using std::cout;
 using std::endl;
 
-Medusa::Medusa()
-{
-	strength = 0;
-}
+//Medusa::Medusa()
+//{
+//	strength = 0;
+//}
 
 Medusa::Medusa(int strengthIn)
-{
-	strength = strengthIn;
-}
+	: Creature(strengthIn)
+{}
 
 Medusa::~Medusa()
 {
@@ -32,12 +31,14 @@ Medusa::~Medusa()
 
 int Medusa::attack()
 {
-	return 3;
+	int roll = (rand() % (6) + 1) + (rand() % (6) + 1);		//sum of two random numbers from 1 to 6
+	return roll;
 }
 
 int Medusa::defend()
 {
-	return 1;
+	int roll = (rand() % (6) + 1);		//random numbers from 1 to 6
+	return roll;
 }
 string Medusa::getName()
 {

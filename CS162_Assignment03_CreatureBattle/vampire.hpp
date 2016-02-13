@@ -17,7 +17,7 @@ class Vampire : public Creature
 protected:
 
 public:
-	Vampire();
+	//Vampire();
 	Vampire(int);
 	~Vampire();
 	int attack();

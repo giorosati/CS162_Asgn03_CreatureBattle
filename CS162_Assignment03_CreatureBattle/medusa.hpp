@@ -17,7 +17,7 @@ class Medusa : public Creature
 protected:
 
 public:
-	Medusa();
+	//Medusa();
 	Medusa(int);
 	~Medusa();
 	int attack();

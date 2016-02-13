@@ -19,10 +19,10 @@ Creature::Creature()
 {
 }
 
-//Creature::Creature(int strengthIn)
-//{
-//	this->strength = strengthIn;
-//}
+Creature::Creature(int strengthIn)
+{
+	this->strength = strengthIn;
+}
 
 Creature::~Creature()
 {

@@ -17,7 +17,7 @@ class HarryPotter : public Creature
 protected:
 
 public:
-	HarryPotter();
+	//HarryPotter();
 	HarryPotter(int);
 	~HarryPotter();
 	int attack();

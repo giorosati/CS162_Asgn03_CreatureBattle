@@ -17,8 +17,8 @@ class Barbarian : public Creature
 protected:
 
 public:
-	Barbarian();
-	//Barbarian(int);
+	//Barbarian();
+	Barbarian(int);
 	~Barbarian();
 	int attack();
 	int defend();

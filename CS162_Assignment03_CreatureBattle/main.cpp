@@ -54,14 +54,14 @@ int main()
 		//display menu function
 		displayMenu();
 		//get user selection for Creature #1
-		cout << "Enter your choice for Creature #1: ";
+		cout << "Enter your choice for Creature #1 or 0 to exit: ";
 		cin >> menuChoice1;
 		cout << endl;
 		if (menuChoice1 == 0) { exitToggle = 0; }
 		if (exitToggle != 0)
 		{
 			//get user selection for Creature #2
-			cout << "Enter your choice for Creature #2: ";
+			cout << "Enter your choice for Creature #2 or 0 to exit: ";
 			cin >> menuChoice2;
 			cout << endl;
 			if (menuChoice2 == 0) { exitToggle = 0; }
@@ -71,51 +71,65 @@ int main()
 		{
 			creatureOne = createCreature(menuChoice1);	//create creature 1
 			creatureTwo = createCreature(menuChoice2);	//create creature 2
-		}
 
-		cout << "Creature One is " << creatureOne->getName() << endl;
-		cout << "Creature Two is " << creatureTwo->getName() << endl;
-		cout << endl;
-		cout << "Press enter to begin the battle..." << endl;
-		cin.get();
+			cout << "Creature One is " << creatureOne->getName() << endl;
+			cout << "Creature Two is " << creatureTwo->getName() << endl;
+			cout << endl;
+			cout << "Press enter to begin the battle..." << endl;
 
-		//make this a loop***************
-		while ((creatureOne->getStength() > 0) && (creatureTwo->getStength() > 0))
-		{
-			//creatureOne attack
-			int tempDamage = creatureOne->attack();
-			int tempDefense = creatureTwo->defend();
-			int netDamage = tempDamage - tempDefense;
+			cin.clear();
+			cin.get();
 
-			cout << creatureOne->getName() << " caused " << netDamage << " of damage!" << endl;
-			creatureTwo->setStrength(creatureTwo->getStength() - tempDamage);
-			if (creatureTwo->getStength() <= 0)  //case where creature two dies
+			//make this a loop***************
+			while ((creatureOne->getStength() > 0) && (creatureTwo->getStength() > 0))
 			{
-				cout << creatureTwo->getName() << " has died..." << endl;
-				cout << "Press enter to continue." << endl;
-				cin.get();
-			}
-			else
-			{	//creatureTwo attack
-				int tempDamage = creatureTwo->attack();
-				int tempDefense = creatureOne->defend();
+				//creatureOne attack
+				int tempDamage = creatureOne->attack();
+				int tempDefense = creatureTwo->defend();
 				int netDamage = tempDamage - tempDefense;
+				if (netDamage < 0) { netDamage = 0; }
 
-				cout << creatureTwo->getName() << " caused " << netDamage << " of damage!" << endl;
-				creatureOne->setStrength(creatureOne->getStength() - tempDamage);
-				if (creatureOne->getStength() <= 0)  //case where creature one dies
+				cout << endl;
+				cout << creatureOne->getName() << " (Creature 1) caused " << netDamage << " of damage!" << endl;
+				creatureTwo->setStrength(creatureTwo->getStength() - netDamage);
+
+				//cout << "c2 strength: " << creatureTwo->getStength() << endl;
+
+				if (creatureTwo->getStength() <= 0)  //case where creature two dies
 				{
-					cout << creatureOne->getName() << " has died..." << endl;
+					cout << creatureTwo->getName() << " (Creature 2) has died..." << endl;
 					cout << "Press enter to continue." << endl;
 					cin.get();
 				}
-			}
-			cout << "attack round has ended." << endl;
-			cout << "creatureOne strength: " << creatureOne->getStength() << endl;
-			cout << "creatureTwo strength: " << creatureTwo->getStength() << endl;
-			cin.get();
-		}	//end of attack while loop
+				else
+				{
+					cout << "Press enter to continue." << endl;
+					cin.get();
+					//creatureTwo attack
+					int tempDamage = creatureOne->attack();
+					int tempDefense = creatureTwo->defend();
+					int netDamage = tempDamage - tempDefense;
+					if (netDamage < 0) { netDamage = 0; }
 
+					cout << creatureTwo->getName() << " (Creature 2) caused " << netDamage << " of damage!" << endl;
+					creatureOne->setStrength(creatureOne->getStength() - netDamage);
+					if (creatureOne->getStength() <= 0)  //case where creature one dies
+					{
+						cout << creatureOne->getName() << " (Creature 1) has died..." << endl;
+						cout << "Press enter to continue." << endl;
+						cin.get();
+					}
+				}
+				cout << "attack round has ended." << endl;
+				cout << endl;
+				cout << creatureOne->getName() << " (Creature 1) strength is now: " << creatureOne->getStength() << endl;
+				cout << creatureTwo->getName() << " (Creature 2) strength is now: " << creatureTwo->getStength() << endl;
+				cout << endl;
+				cout << "Press enter to continue...";
+				cin.clear();
+				cin.get();
+			}	//end of attack while loop
+		}
 	}	//end of game/exit while loop
 
 	cout << endl;
@@ -154,27 +168,27 @@ Creature* createCreature(int menuChoice)
 	{
 	case 1:	//medusa
 	{
-		Creature* creatureOut = new Medusa;
+		Creature* creatureOut = new Medusa(8);
 		return creatureOut;
 	}
 	case 2:	//barbarian
 	{
-		Creature* creatureOut = new Barbarian;
+		Creature* creatureOut = new Barbarian(12);
 		return creatureOut;
 	}
 	case 3: //vampire
 	{
-		Creature* creatureOut = new Vampire;
+		Creature* creatureOut = new Vampire(18);
 		return creatureOut;
 	}
 	case 4:	//blue men
 	{
-		Creature* creatureOut = new BlueMen;
+		Creature* creatureOut = new BlueMen(12);
 		return creatureOut;
 	}
 	case 5:	//harry potter
 	{
-		Creature* creatureOut = new HarryPotter;
+		Creature* creatureOut = new HarryPotter(10);
 		return creatureOut;
 	}
 	} //end switch for create Creature

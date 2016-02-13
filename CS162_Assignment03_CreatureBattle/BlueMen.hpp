@@ -17,7 +17,7 @@ class BlueMen : public Creature
 protected:
 
 public:
-	BlueMen();
+	//BlueMen();
 	BlueMen(int);
 	~BlueMen();
 	int attack();

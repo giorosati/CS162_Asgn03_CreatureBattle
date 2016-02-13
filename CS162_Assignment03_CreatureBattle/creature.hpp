@@ -23,7 +23,7 @@ protected:
 
 public:
 	Creature();					//default constructor
-	//Creature(int);				//constructor w/int for strength
+	Creature(int);				//constructor w/int for strength
 	~Creature();				//deconstructor
 	virtual int attack() = 0;		//attack function prototype
 	virtual int defend() = 0;		//defend function prototype

@@ -15,15 +15,14 @@
 using std::cout;
 using std::endl;
 
-BlueMen::BlueMen()
-{
-	strength = 0;
-}
+//BlueMen::BlueMen()
+//{
+//	strength = 0;
+//}
 
 BlueMen::BlueMen(int strengthIn)
-{
-	strength = strengthIn;
-}
+	: Creature(strengthIn)
+{}
 
 BlueMen::~BlueMen()
 {
