@@ -134,6 +134,9 @@
     <ClCompile Include="medusa.cpp" />
     <ClCompile Include="vampire.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="oldMainForReference.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

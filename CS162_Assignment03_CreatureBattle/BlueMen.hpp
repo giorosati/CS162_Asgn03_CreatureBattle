@@ -21,7 +21,7 @@ public:
 	BlueMen(int);
 	~BlueMen();
 	int attack();
-	int defend();
+	int defend(int,int);
 	string getName();
 };
 

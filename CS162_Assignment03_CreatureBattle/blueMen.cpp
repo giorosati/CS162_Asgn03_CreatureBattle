@@ -31,12 +31,32 @@ BlueMen::~BlueMen()
 
 int BlueMen::attack()
 {
-	return 3;
+	int roll = (rand() % (10) + 1) + (rand() % (10) + 1);		//sum of two random numbers from 1 to 10
+	return roll;
 }
 
-int BlueMen::defend()
+int BlueMen::defend(int damageIn, int x = 0)
 {
-	return 1;
+	int roll = 0;
+	if (this->strength < 5)	//when strength is 4 or less, use only one die
+	{
+		//cout << "only one die used..." << endl;
+		roll = (rand() % (6) + 1) + 3;	//random number from 1 to 6, plus 3 for armor
+		if ((damageIn - roll) < 0) roll = 0;
+	}
+	else if ((this->strength > 4) && (this->strength < 9))	//if strength 5 to 8, only two die are used
+	{
+		//cout << "only two die used..." << endl;
+		roll = (rand() % (6) + 1) + (rand() % (6) + 1) + 3;	//sum of two random numbers from 1 to 6, plus 3 for armour
+		if ((damageIn - roll) < 0) roll = 0;
+	}
+	else
+	{
+		//cout << "three die used..." << endl;
+		roll = (rand() % (6) + 1) + (rand() % (6) + 1) + (rand() % (6) + 1) + 3;	//sum of three random numbers from 1 to 6, plus 3 armor
+		if ((damageIn - roll) < 0) roll = 0;
+	}
+	return roll;
 }
 
 string BlueMen::getName()

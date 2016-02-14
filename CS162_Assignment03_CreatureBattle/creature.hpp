@@ -22,14 +22,14 @@ protected:
 	int strength;
 
 public:
-	Creature();					//default constructor
-	Creature(int);				//constructor w/int for strength
-	~Creature();				//deconstructor
+	Creature();						//default constructor
+	Creature(int);					//constructor w/int for strength
+	~Creature();					//deconstructor
 	virtual int attack() = 0;		//attack function prototype
-	virtual int defend() = 0;		//defend function prototype
+	virtual int defend(int,int) = 0;		//defend function prototype
 	virtual string getName() = 0;	//displayName function prototype
-	int getStength();			//getter for strength
-	void setStrength(int);		//setter for strength
+	int getStength();				//getter for strength
+	void setStrength(int);			//setter for strength
 };
 
 #endif

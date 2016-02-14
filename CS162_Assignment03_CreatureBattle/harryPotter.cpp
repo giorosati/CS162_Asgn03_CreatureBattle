@@ -31,12 +31,20 @@ HarryPotter::~HarryPotter()
 
 int HarryPotter::attack()
 {
-	return 3;
+	int roll = (rand() % (6) + 1) + (rand() % (6) + 1);		//sum of two random numbers from 1 to 6
+	return roll;
 }
 
-int HarryPotter::defend()
+int HarryPotter::defend(int damageIn, int deathCount)
 {
-	return 1;
+	int roll = (rand() % (6) + 1) + (rand() % (6) + 1);		//sum of two random numbers from 1 to 6
+	if (((damageIn - roll) >= strength) && (deathCount == 0))
+	{
+		strength = 20;
+		return (damageIn - roll);
+	}
+	else if ((damageIn - roll) < 0) return 0;
+	else return (damageIn - roll);
 }
 
 string HarryPotter::getName()

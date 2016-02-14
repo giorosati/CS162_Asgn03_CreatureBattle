@@ -21,7 +21,7 @@ public:
 	Barbarian(int);
 	~Barbarian();
 	int attack();
-	int defend();
+	int defend(int,int);
 	string getName();
 };
 

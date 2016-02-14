@@ -35,10 +35,11 @@ int Barbarian::attack()
 	return roll;
 }
 
-int Barbarian::defend()
+int Barbarian::defend(int damageIn, int x = 0)
 {
 	int roll = (rand() % (6) + 1) + (rand() % (6) + 1);		//sum of two random numbers from 1 to 6
-	return roll;
+	if ((damageIn - roll) < 0) return 0;
+	else return (damageIn - roll);
 }
 
 string Barbarian::getName()

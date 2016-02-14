@@ -32,13 +32,15 @@ Medusa::~Medusa()
 int Medusa::attack()
 {
 	int roll = (rand() % (6) + 1) + (rand() % (6) + 1);		//sum of two random numbers from 1 to 6
-	return roll;
+	if (roll == 12) return 100;		//set attack at 100 to use as a switch in main
+	else return roll;
 }
 
-int Medusa::defend()
+int Medusa::defend(int damageIn, int x = 0)
 {
-	int roll = (rand() % (6) + 1);		//random numbers from 1 to 6
-	return roll;
+	int roll = (rand() % (6) + 1) + 3;		//random number from 1 to 6 plus armor value of 3
+	if ((damageIn - roll) < 0) return 0;
+	else return (damageIn - roll);
 }
 string Medusa::getName()
 {

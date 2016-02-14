@@ -31,12 +31,20 @@ Vampire::~Vampire()
 
 int Vampire::attack()
 {
-	return 3;
+	int roll = (rand() % (12) + 1);		//random number from 1 to 12
+	return roll;
 }
 
-int Vampire::defend()
+int Vampire::defend(int damageIn, int x = 0)
 {
-	return 1;
+	int charm = (rand() % (2) + 1);		//random number of 1 or 2
+	if (charm == 2) return 200;
+	else
+	{
+		int roll = (rand() % (6) + 1) + 1;		//random number from 1 to 6, plus armor value of 1
+		if ((damageIn - roll) < 0) return 0;
+		else return (damageIn - roll);
+	}
 }
 
 string Vampire::getName()
