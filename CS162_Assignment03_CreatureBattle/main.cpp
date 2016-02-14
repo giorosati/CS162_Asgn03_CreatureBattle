@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 #include <time.h>
+#include <cstdlib>
 #include "creature.hpp"
 #include "medusa.hpp"
 #include "barbarian.hpp"

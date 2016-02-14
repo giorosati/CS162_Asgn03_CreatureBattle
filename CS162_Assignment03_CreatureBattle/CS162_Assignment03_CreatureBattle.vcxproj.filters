@@ -27,10 +27,10 @@
     <ClInclude Include="vampire.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BlueMen.hpp">
+    <ClInclude Include="harryPotter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="harryPotter.hpp">
+    <ClInclude Include="blueMen.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

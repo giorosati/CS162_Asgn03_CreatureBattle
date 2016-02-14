@@ -119,7 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="barbarian.hpp" />
-    <ClInclude Include="BlueMen.hpp" />
+    <ClInclude Include="blueMen.hpp" />
     <ClInclude Include="creature.hpp" />
     <ClInclude Include="harryPotter.hpp" />
     <ClInclude Include="medusa.hpp" />
